@@ -1,0 +1,14 @@
+# Minimal config. `supabase init` would generate a fuller file; these are the
+# settings Harvest relies on.
+project_id = "harvest"
+
+[functions.search]
+# Anyone with the public anon key can search; there's no user to authenticate.
+verify_jwt = false
+
+[functions.go]
+verify_jwt = false
+
+[functions.ingest]
+# Auth is handled inside the function: scheduler secret or a signed-in admin.
+verify_jwt = false

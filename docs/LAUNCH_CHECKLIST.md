@@ -1,0 +1,13 @@
+# Launch checklist (things only you can do)
+- [ ] Decide the legal owner (you or your wife's entity) with the accountant; register the domain in that name
+- [ ] Domain + email address for support and privacy contact
+- [ ] Lawyer reviews the privacy policy and affiliate disclosure; publish at https://<domain>/privacy
+- [ ] Supabase project created; run migrations; set secrets (see supabase/.env.example); add yourself to `admins`
+- [ ] Amazon Associates India + Creators API access; Flipkart Affiliate approval
+- [ ] Schedule ingest (docs/OPERATIONS.md); review the first batches by hand
+- [ ] Apple Developer ($99/yr) and Google Play Console ($25 once) accounts
+- [ ] `cd apps/app && npx eas build -p android --profile preview`, install on a real phone, test unlock, add card, search, watch
+- [ ] Test on a real iPhone (TestFlight) — Face ID, background alerts
+- [ ] Verify background-task and notification behaviour on devices (not testable here)
+- [ ] Web: `npm run build:web --workspace apps/app` and upload `apps/app/dist` to any static host
+- [ ] Take screenshots; fill store listing from docs/STORE_LISTING_DRAFT.md

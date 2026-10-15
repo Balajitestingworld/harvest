@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "../../apps/ops/vendor/core",
+    "rewriteRelativeImportExtensions": true,
+    "allowImportingTsExtensions": false,
+    "rootDir": "./src",
+    "declaration": false,
+    "sourceMap": false,
+    "types": []
+  },
+  "include": ["src"]
+}

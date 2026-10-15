@@ -1,0 +1,14 @@
+# Dependencies and build output
+node_modules/
+dist/
+.expo/
+
+# Secrets: keep the templates, never the real values
+.env
+.env.*
+!.env.example
+
+# Deploy tooling and OS files
+.netlify/
+.DS_Store
+*.log

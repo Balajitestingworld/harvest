@@ -1,0 +1,25 @@
+{
+  "name": "harvest",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Harvest \u2014 privacy-first card offer aggregator (India). Web, Android and iPhone from one Expo codebase.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "app": "npm --workspace apps/app run start",
+    "web": "npm --workspace apps/app run web",
+    "android": "npm --workspace apps/app run android",
+    "ios": "npm --workspace apps/app run ios",
+    "test": "npm --workspace packages/core run test && npm run test:functions",
+    "typecheck": "npm --workspace packages/core run typecheck",
+    "sync:core": "node scripts/sync-core.mjs",
+    "build:ops-core": "npm --workspace packages/core run build:browser",
+    "ops": "npx --yes serve apps/ops -l 5173",
+    "test:functions": "node --import tsx --test supabase/tests/demo-mode.test.ts supabase/tests/database-mode.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
